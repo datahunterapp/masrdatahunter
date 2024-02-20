@@ -10,7 +10,7 @@ def search_in_files(folder_path, search_string):
     for root,dirs,files in os.walk(folder_path):
         for file in files:
             if file.endswith(".csv"):
-                file_path = r"api/usf/p1_2_DONE.csv"
+                file_path = r"api\usf\p1_2_DONE.csv"
                 with open(file_path, "r", encoding="utf-8") as f:
                     mm = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
                     for line in iter(mm.readline, b''):
@@ -40,7 +40,7 @@ def home():
     return {"dev": "@usfnassar","itsWork":False,"msg":"https://t.me/datahunter0/24"}
 @app.route('/s', methods=['GET'])
 def search_api_id():
-    folder_path = r'api/usf'
+    folder_path = r"masrdatahunter\api\usf"
     search_string = request.args.get('key')
 
     if  not search_string:
