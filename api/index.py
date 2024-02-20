@@ -40,7 +40,7 @@ def home():
     return {"dev": "@usfnassar","itsWork":False,"msg":"https://t.me/datahunter0/24"}
 @app.route('/s', methods=['GET'])
 def search_api_id():
-    folder_path = r"usf"
+    folder_path = r"masrdatahunter\api\usf"
     search_string = request.args.get('key')
 
     if  not search_string:
